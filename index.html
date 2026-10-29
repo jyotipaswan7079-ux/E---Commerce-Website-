@@ -1,1 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>ShopEase | Online Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <a href="#" class="logo">Shop<span>Ease</span></a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <button class="cart-button" id="cartButton">
+            🛒 Cart <span id="cartCount">0</span>
+        </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="tagline">YOUR STYLE, YOUR CHOICE</p>
+
+            <h1>Discover Your<br>
+                <span>Perfect Style</span>
+            </h1>
+
+            <p>
+                Explore trendy fashion, accessories and more.
+                Find your favorites at amazing prices!
+            </p>
+
+            <a href="#products" class="shop-button">
+                Shop Now →
+            </a>
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80"
+                alt="Fashion shopping store">
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits">
+        <div>
+            <span>🚚</span>
+            <h3>Free Delivery</h3>
+            <p>On selected orders</p>
+        </div>
+
+        <div>
+            <span>🔒</span>
+            <h3>Secure Shopping</h3>
+            <p>A simple shopping experience</p>
+        </div>
+
+        <div>
+            <span>✨</span>
+            <h3>Latest Collection</h3>
+            <p>Trendy products for you</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+
+        <div class="section-heading">
+            <p class="tagline">OUR COLLECTION</p>
+            <h2>Featured Products</h2>
+            <p>Find something you will love.</p>
+        </div>
+
+        <!-- Search -->
+        <div class="search-container">
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search products..."
+                aria-label="Search products">
+
+            <button id="searchButton">Search</button>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="filters">
+            <button class="filter-btn active" data-category="All">
+                All
+            </button>
+
+            <button class="filter-btn" data-category="Fashion">
+                Fashion
+            </button>
+
+            <button class="filter-btn" data-category="Accessories">
+                Accessories
+            </button>
+
+            <button class="filter-btn" data-category="Footwear">
+                Footwear
+            </button>
+        </div>
+
+        <!-- Product Cards -->
+        <div class="product-grid" id="productGrid"></div>
+
+        <p class="empty-message" id="emptyMessage" hidden>
+            No products found. Try another search.
+        </p>
+
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div>
+            <p class="tagline">ABOUT SHOPEASE</p>
+
+            <h2>Shopping Made Simple</h2>
+
+            <p>
+                ShopEase is a front-end e-commerce website project
+                created using HTML, CSS and JavaScript.
+
+                Discover products, search your favorites and add
+                items to your shopping cart.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2>Stay Connected</h2>
+
+        <p>
+            Thank you for visiting ShopEase!
+            Explore our collection and enjoy shopping.
+        </p>
+
+        <a href="#products" class="shop-button">
+            Explore Products
+        </a>
+    </section>
+
+    <!-- Shopping Cart -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside
+        class="cart-panel"
+        id="cartPanel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="cartTitle"
+        aria-hidden="true">
+
+        <div class="cart-header">
+            <h2 id="cartTitle">Your Cart 🛒</h2>
+
+            <button
+                class="close-cart"
+                id="closeCart"
+                aria-label="Close cart">
+                ×
+            </button>
+        </div>
+
+        <div class="cart-items" id="cartItems"></div>
+
+        <div class="cart-footer">
+            <h3>
+                Total:
+                <span id="cartTotal">₹0</span>
+            </h3>
+
+            <button id="checkoutButton" class="checkout-button">
+                Proceed to Checkout
+            </button>
+
+            <p class="demo-note">
+                Demo project: No real payment is processed.
+            </p>
+        </div>
+
+    </aside>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#home" class="logo">Shop<span>Ease</span></a>
+
+        <p>
+            © <span id="year"></span> ShopEase.
+            Created for a student project.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
